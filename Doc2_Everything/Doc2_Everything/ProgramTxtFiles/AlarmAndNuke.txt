@@ -1,0 +1,29 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Doc2_Everything.MyClasses;
+
+namespace Doc2_Everything
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+            //wow, everything here is done in the classes and interface, neat.
+
+            AlarmClock myClock = new AlarmClock(5);
+            myClock.doMyStuff();
+
+            // try another iCountAndActionable object
+            Console.WriteLine();
+            Nuke aNuke = new Nuke(3);
+            aNuke.doMyStuff();
+
+            Console.ReadLine();
+
+        } // end main
+    } // end class
+} // end namespace

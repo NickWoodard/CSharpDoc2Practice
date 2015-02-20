@@ -1,0 +1,35 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Doc2_Everything.MyClasses;
+
+namespace Doc2_Everything
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //create a doctor
+            Doctor d1 = new Doctor("111223333", "Dr 11", "Spanish");
+            Console.WriteLine("Doctor's name is {0} and his 2nd language is {1}",
+                d1.Name, d1.SecondLanguage);
+            Console.WriteLine("Doctor says: " + d1.SayHelloWorld());
+            Console.WriteLine("Doctor also says: " + d1.SayBye());
+            Console.WriteLine();
+
+            // create a robot
+            Robot r1 = new Robot(5, "JimmyJamBeeperoo", "24V", "Japanese");
+            Console.WriteLine("Robot's name is {0} and its 2nd language is {1}",
+                r1.RobotName, r1.SecondLanguage);
+            Console.WriteLine("Robot says: " + r1.SayHelloWorld());
+            Console.WriteLine("Robot also says: " + r1.SayBye());
+            
+
+
+            Console.ReadLine();
+
+        } // end main
+    } // end class
+} // end namespace

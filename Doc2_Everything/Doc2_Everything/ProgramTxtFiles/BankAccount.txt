@@ -1,0 +1,63 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Doc2_Everything.MyClasses;
+
+namespace Doc2_Everything
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // create a bank account!
+            BankAccount ac1 = new BankAccount();
+            // enter the values of the properties now!
+            // here, we're using an empty constructor
+            ac1.AcNo = "A100";
+            ac1.AcholderName = "John Big";
+            ac1.AcBalance = 1234.00m; // the weird m for decimal variables. ¯\_(ツ)_/¯
+            // and now we can actually use ToString() and get something back! Whoa!
+            Console.WriteLine(ac1.ToString());
+
+            // withdraw 100.00 from ac1
+            Console.WriteLine("Your current balance before withdrawal is :" +
+                ac1.AcBalance.ToString("C"));
+            int receivedCode = ac1.ProcessWithdrawal(100.00m);
+            if (receivedCode == 0)
+            {
+                Console.WriteLine("SOrry bro can't take out that much!");
+            }
+            else
+            {
+                Console.WriteLine("Transaction Complete!");
+                Console.WriteLine("Your new balance is: " + ac1.AcBalance.ToString("C"));
+            } // end withdrawal
+            Console.WriteLine("\n"); // line break
+
+            //now, let's deposit $100
+            int result = ac1.ProcessDeposit(100.00m);
+            if (result == 0)
+            {
+                Console.WriteLine("Can't deposit zero or negative amount!");
+            }
+            else
+            {
+                Console.WriteLine("Transaction Complete!");
+                Console.WriteLine("Your new balance is: " + ac1.AcBalance.ToString("C"));
+            }
+            Console.WriteLine(ac1.ToString()); //see what ToString() does by default!
+            // wow that's awful haha okay that's why we override it later.
+
+            // now, using constructor 2, we're able to feed the properties to the class as we create it!
+            BankAccount ac2 = new BankAccount("AC200", "Xbox", 5.00m);
+            //show info just to be sure!
+            Console.WriteLine(ac2.ToString());
+
+
+            Console.ReadLine();
+
+        } // end main
+    } // end class
+} // end namespace

@@ -1,0 +1,6 @@
+E:\VIsual Studio Projects\Doc2_Everything\Doc2_Everything\bin\Debug\Doc2_Everything.exe.config
+E:\VIsual Studio Projects\Doc2_Everything\Doc2_Everything\bin\Debug\Doc2_Everything.exe
+E:\VIsual Studio Projects\Doc2_Everything\Doc2_Everything\bin\Debug\Doc2_Everything.pdb
+E:\VIsual Studio Projects\Doc2_Everything\Doc2_Everything\obj\Debug\Doc2_Everything.csprojResolveAssemblyReference.cache
+E:\VIsual Studio Projects\Doc2_Everything\Doc2_Everything\obj\Debug\Doc2_Everything.exe
+E:\VIsual Studio Projects\Doc2_Everything\Doc2_Everything\obj\Debug\Doc2_Everything.pdb

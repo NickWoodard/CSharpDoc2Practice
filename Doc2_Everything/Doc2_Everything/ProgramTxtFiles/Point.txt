@@ -1,0 +1,47 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Doc2_Everything.MyClasses;
+
+namespace Doc2_Everything
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //create a point
+            Point myPt1 = new Point();
+            //set the iVars
+            myPt1.setX(3);
+            myPt1.setY(4);
+            //display some info.
+            Console.WriteLine("MyPt1 info: " + myPt1.PointInfo());
+
+            // find the distance of mypt1 from the origin
+            double myDistFromOrigin = myPt1.DistanceFromOrigin();
+            // display the result with 2 digits after the decimal
+            // ^^^^ that's what hte F2 format does. 2 decimal places! ^^^^
+            Console.WriteLine("Distance of point1 from origin is: " + myDistFromOrigin.ToString("F2"));
+            Console.WriteLine(); // line break
+
+            //Create another point!
+            Point myPt2 = new Point();
+            myPt2.setX(10);
+            myPt2.setY(20);
+            Console.WriteLine("MyPt2 info: " + myPt2.PointInfo());
+
+            //find and display the distance of point 2 from the origin.
+            myDistFromOrigin = myPt2.DistanceFromOrigin();
+            Console.WriteLine("Distance of point2 from origin is: " + myDistFromOrigin.ToString("F2"));
+
+            // find and display the distance of point1 and point 2
+            double myDist = myPt1.distanceFromAnotherPoint(myPt2);
+            Console.WriteLine("Distance of point 1 from point 2 is: " + myDist.ToString("F2"));
+
+            Console.Read(); 
+
+        } // end main
+    } // end class
+} // end namespace

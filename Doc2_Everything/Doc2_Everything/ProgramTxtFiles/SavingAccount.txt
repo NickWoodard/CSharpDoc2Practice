@@ -1,0 +1,40 @@
+﻿using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using Doc2_Everything.MyClasses;
+
+namespace Doc2_Everything
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            // create a savings account
+            SavingAccount sac1 = new SavingAccount("S100", "John Big", 1200.00m, 0.10m);
+            // shows info! Yeah! Overriding!
+            Console.WriteLine(sac1.ToString());
+            // calls the ComputeInterest() method in the sac1 class, and makes the output a string with currency.
+            Console.WriteLine("Your monthly interest will be: " + sac1.ComputeInterest().ToString("C"));
+
+            // deposit $1000
+            decimal deposit = 1000.00m;
+            // we can use the ProcessDeposit() method that comes with the class! Inheritance!
+            int myTrCode = sac1.ProcessDeposit(deposit);
+            if (myTrCode == 1)
+            {
+                Console.WriteLine("\n========== Processing a Deposit transaction ===========\n");
+                Console.WriteLine("Your deposit of {0:C} transaction complete.", deposit);
+                Console.WriteLine("Your new balance is: " + sac1.AcBalance.ToString("C"));
+                Console.WriteLine("Your monthly interest will be: " + sac1.ComputeInterest().ToString("C"));
+            }
+            else
+            {
+                Console.WriteLine("Sorry the transaction failed. Please call our manager!");
+            }
+            Console.ReadLine();
+
+        } // end main
+    } // end class
+} // end namespace
